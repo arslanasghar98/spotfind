@@ -31,11 +31,11 @@ bun dev
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/spotify-song-recommender-bot.git
+   git clone https://github.com/yourusername/spotfind.git
    ```
 2. Navigate to the project directory:
    ```sh
-   cd spotify-song-recommender-bot
+   cd spotfind
    ```
 3. Install dependencies:
    ```sh
