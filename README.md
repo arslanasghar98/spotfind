@@ -1,4 +1,17 @@
+# Spotify Song Recommender Bot
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Overview
+
+The Spotify Song Recommender Bot is an AI-powered bot that provides personalized song recommendations using the Spotify API. It offers a seamless and interactive experience by suggesting songs based on user interests, specific artists, and languages.
+
+## Features
+
+- Personalized Song Recommendations: Get song recommendations tailored to your interests or specific conditions like workout, study, or party.
+- Artist-Based Recommendations: Receive curated song lists from your favorite artists.
+- Language-Based Recommendations: Explore songs based on your preferred language.
+- Interactive Chat Interface: Engage with the bot through a real-time chat interface for personalized recommendations.
 
 ## Getting Started
 
@@ -14,23 +27,36 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/spotify-song-recommender-bot.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd spotify-song-recommender-bot
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Set up environment variables:
+   - Create a `.env` file in the root directory.
+   - Add your Spotify and OpenAI API keys:
+     ```env
+     SPOTIFY_CLIENT_API_KEY=your_spotify_client_api_key
+     SPOTIFY_SECRET_API_KEY=your_spotify_secret_api_key
+     OPENAI_API_KEY=your_openai_api_key
+     ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## How It Works
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- The bot uses the OpenAI GPT-3.5-turbo model to understand user queries and generate responses.
+- Depending on the user’s input, the bot calls the appropriate Spotify API endpoints to fetch song recommendations.
+- The bot provides recommendations in three main categories:
+  - **Song Recommendations Based on Interests**: Fetches songs based on user-provided genres or activities.
+  - **Artist-Based Recommendations**: Fetches songs from a specific artist.
+  - **Language-Based Recommendations**: Fetches songs in a specific language.
+- The bot interacts with users through a real-time chat interface, displaying recommendations and links to the songs on Spotify.
+- The bot makes HTTP requests to the Spotify API endpoints using an access token obtained via Spotify’s OAuth2 authentication.
