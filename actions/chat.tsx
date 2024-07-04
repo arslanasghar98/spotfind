@@ -207,12 +207,6 @@ export async function sendMessage(message: string): Promise<{
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        src={track.imageUrl}
-                        alt={`${track.name} album cover`}
-                        width="50"
-                        height="50"
-                      />
                       {track.name} by {track.artist}
                     </a>
 
@@ -248,12 +242,6 @@ export async function sendMessage(message: string): Promise<{
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        src={track.imageUrl}
-                        alt={`${track.name} album cover`}
-                        width="50"
-                        height="50"
-                      />
                       {track.name} by {track.artist}
                     </a>
 
